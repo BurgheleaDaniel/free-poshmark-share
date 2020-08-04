@@ -1,6 +1,7 @@
 function scanItemsFromCloset() {
-  // items = document.querySelectorAll('.share-gray-large:not(.chrome-clicked)');
-  items = document.querySelectorAll(".share-gray:not(.chrome-clicked)");
+  items = document.querySelectorAll(
+    "i.icon.share-gray-large:not(.chrome-clicked)"
+  );
 
   if (items.length == 0) {
     showMessage("success", "The sharing is now DONE", 9999);
@@ -43,8 +44,7 @@ function openShareListingPopup(item, callback) {
 }
 
 function shareListingToMyFollowers() {
-  // var linkPopupShare = document.querySelectorAll('.share-wrapper-container')[0];
-  var linkPopupShare = document.querySelectorAll(".share-wrapper-con")[0];
+  var linkPopupShare = document.querySelectorAll(".share-wrapper-container")[0];
 
   if (linkPopupShare) {
     linkPopupShare.click();

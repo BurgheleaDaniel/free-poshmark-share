@@ -1,8 +1,7 @@
 // https://poshmark.com/user/katef/followers
 
 function scanUnfollowedUsers() {
-  // items = document.querySelectorAll('.follow__btn.btn--primary:not(.f-hide)');
-  items = document.querySelectorAll(".auth-required.btn.blue:not(.f-hide)");
+  items = document.querySelectorAll(".follow__btn.btn--primary:not(.f-hide)");
 
   if (items.length == 0) {
     showMessage("success", "The following is now DONE", 9999);
