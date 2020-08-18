@@ -2,18 +2,7 @@
   "name": "Poshmark Assistant",
   "version": "1.0.3",
   "description": "Poshmark Assistant to Automate Share and Follow on Poshmark!",
-  "permissions": [
-    "activeTab",
-    "declarativeContent",
-    "https://www.googleapis.com/"
-  ],
-  "oauth2": {
-    "client_id": "665859454684-s6nmohpktccl2srxvc67thbmpclpa36v.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/plus.login",
-      "https://www.googleapis.com/auth/chromewebstore.readonly"
-    ]
-  },
+  "permissions": ["activeTab", "declarativeContent"],
   "background": {
     "scripts": ["/assets/js/background.js"],
     "persistent": false

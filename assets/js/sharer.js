@@ -24,7 +24,7 @@ function scanItemsFromCloset() {
       openShareListingPopup(items[index], shareListingToMyFollowers);
     }
     index++;
-  }, 1000);
+  }, 2000);
 }
 
 function openShareListingPopup(item, callback) {
@@ -38,7 +38,7 @@ function openShareListingPopup(item, callback) {
   var interval = setInterval(function () {
     callback();
     clearInterval(interval);
-  }, 500);
+  }, 1000);
 }
 
 function shareListingToMyFollowers() {

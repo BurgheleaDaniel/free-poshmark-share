@@ -1,5 +1,3 @@
-// https://poshmark.com/user/katef/followers
-
 function scanUnfollowedUsers() {
   items = document.querySelectorAll(".follow__btn.btn--primary:not(.f-hide)");
 
