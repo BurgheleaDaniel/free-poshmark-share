@@ -2,8 +2,13 @@ function scanItemsFromCloset() {
   items = document.querySelectorAll("i.icon.share-gray:not(.chrome-clicked)");
 
   if (items.length == 0) {
-    showMessage("success", "The sharing is now DONE", 9999);
-    return;
+    items = document.querySelectorAll(
+      "i.icon.share-gray-large:not(.chrome-clicked)"
+    );
+    if (items.length == 0) {
+      showMessage("success", "The sharing is now DONE", 9999);
+      return;
+    }
   }
 
   showMessage("success", "The sharing procces has stared", 9999);
@@ -44,12 +49,11 @@ function openShareListingPopup(item, callback) {
 function shareListingToMyFollowers() {
   var linkPopupShare = document.querySelectorAll(".share-wrapper-con")[0];
 
-  if (linkPopupShare) {
-    linkPopupShare.click();
-  } else {
-    // showMessage('warning', 'Please check if you are logged in!', 2000);
-    // document.location.assign('/login');
+  if (linkPopupShare === undefined) {
+    linkPopupShare = document.querySelectorAll(".internal-share__link")[0];
   }
+
+  linkPopupShare.click();
 }
 
 function tryToAddNewItemsInCloset() {
